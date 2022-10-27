@@ -1,0 +1,115 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Fraunces', serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: var(--primary-font);
+  margin: 0;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cream);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 90%;
+  height: 92%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.image img {
+  max-width: 100%;
+  display: block;
+}
+.image img:last-child {
+  display: none;
+}
+.text {
+  padding: 20px;
+}
+.text .type {
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 10px;
+  margin: 0;
+}
+.text .title {
+  color: var(--very-dark-blue);
+  font-family: var(--secondary-font);
+  font-size: 30px;
+  margin: 0;
+  margin: 10px 0;
+}
+.text .description {
+  color: var(--dark-grayish-blue);
+}
+.payment {
+  width: 100%;
+}
+.payment .cost {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.payment .cost h1 {
+  color: var(--dark-cyan);
+  font-family: var(--secondary-font);
+  font-size: 40px;
+  margin: 0;
+  margin: 10px 0;
+}
+.payment .cost span {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+.payment button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  padding: 13px 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 10px;
+}
+@media (min-width: 767px) {
+  main {
+    width: 550px;
+    display: flex;
+    height: fit-content;
+  }
+  .image {
+    width: 50%;
+  }
+  .image img:first-child {
+    display: none;
+  }
+  .image img:last-child {
+    display: block;
+  }
+  .text {
+    width: 50%;
+  }
+  .title {
+    font-size: 30px !important;
+  }
+  .cost h1 {
+    font-size: 31px !important;
+  }
+}
